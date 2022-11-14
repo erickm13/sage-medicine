@@ -1,0 +1,19 @@
+.mensaje{
+	text-align: center;
+}
+
+.logo-contenedor{
+	display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.boton{
+	text-align: center;
+}
+
+.container-nagvar{
+    display: 100%;
+    padding-right: 20px;
+    padding-top: 5px;
+}

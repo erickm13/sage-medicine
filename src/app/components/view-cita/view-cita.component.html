@@ -1,0 +1,32 @@
+<div class=" wrapper">
+	<div *ngFor="let data of dataUser"  class="detailsDoctor">
+
+		<div class="body">
+			<div class="modal-header">
+				<h1 class="modal-dialog" id="exampleModalFullscreenLabel">Datos Personales</h1>
+			</div>
+			<div class="col mt-5">
+				<div class="row-lg-5">
+					<p class=""><b>Paciente: </b>{{data.nombre}}</p>
+				</div>
+			</div>
+			<div class="col">
+				<p class=""><b>Telefono: </b> {{data.telefono}}</p>
+			</div>
+
+			<div class="col">
+				<p class=""><b>Email: </b> {{data.email}}</p>
+			</div>
+
+			<div class="col">
+				<p class=""><b>Alergias: </b> {{data.nombre_alergia}}</p>
+			</div>
+
+			<div class="col">
+				<p class="receta"><b>Receta: </b> <textarea [(ngModel)]="receta"  class="form-control" aria-label="With textarea" placeholder={{data.datos_receta}}></textarea></p>
+			</div>
+			<button type="button" class="btn btn-success col mt-5 me-2" (click)="regresar()">Regresar</button>
+			<button type="button" class="btn btn-warning col mt-5" (click)="asignarReceta(data.id_horario)">Asignar Receta</button>
+	</div>
+
+</div>

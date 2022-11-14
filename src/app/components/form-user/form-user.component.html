@@ -1,0 +1,76 @@
+
+	<div class=" wrapper">
+		<div class="row-lg-5">
+		<img class="bd-placeholder-img rounded-circle" width="250" height="250" src="../../../assets/img/fondoFormUser.jpg" >
+
+		<h2 class="fw-normal">Bienvenido a Sage Medicine!</h2>
+		<p>Queremos Conocerte Mejor!</p>
+		</div>
+		<div class="body">
+			<div class="modal-header">
+				<h1 class="modal-title fs-1" id="exampleModalFullscreenLabel">Datos Personales</h1>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-floating mb-3 m-sm-4">
+						<input [(ngModel)]="name" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+						<label for="floatingInput">Nombres</label>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-floating mb-3 m-sm-4">
+						<input [(ngModel)]="apellido" type="text" class="form-control" id="floatingPassword" placeholder="Password">
+						<label for="floatingPassword">Apellidos</label>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<select [(ngModel)]="id_alergia"  class="form-select selects" aria-label="Disabled select example">
+						<option *ngFor="let dataAlergia of listaAlergias" value={{dataAlergia.id_alergias}}>{{dataAlergia.nombre_alergia}}</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-floating m-sm-4">
+						<input [(ngModel)]="direccion" type="text" class="form-control" id="floatingInput" placeholder="direccion">
+						<label for="floatingInput">Direccion</label>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-floating m-sm-4">
+						<input [(ngModel)]="telefono" type="number" class="form-control" id="floatingInput" placeholder="direccion">
+						<label for="floatingInput">Telefono</label>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="form-floating m-sm-4">
+						<input [(ngModel)]="dpi" type="number" class="form-control" id="floatingInput" placeholder="direccion">
+						<label for="floatingInput">DPI</label>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="form-floating m-sm-4">
+						<input [(ngModel)]="nacimiento" type="date" class="form-control" id="floatingInput" placeholder="direccion">
+						<label for="floatingInput">Fecha de Nacimiento</label>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+						<select [(ngModel)]="id_dep" (ngModelChange)="mostrarDep()"  class="form-select selects" aria-label="Disabled select example">
+							<option *ngFor="let data of listaDepartamentos" value={{data.id_departamento}}>{{data.nombre_departamento}}</option>
+						</select>
+				</div>
+				<div class="col-md-3">
+					<select [(ngModel)]="id_muni"  class="form-select selects" aria-label="Disabled select example">
+						<option *ngFor="let data of listaMunicipios" value={{data.id_municipio}}>{{data.nombre_municipio}}</option>
+
+					</select>
+				</div>
+			</div>
+
+
+			<button type="submit" class="btn btn-success" (click)="enviar()">Enviar</button>
+		</div>
+	</div>

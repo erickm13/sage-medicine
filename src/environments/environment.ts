@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig:{
+    apiKey: "AIzaSyAi5XQ4XHy7D7rzQXDEwFhvlKMinrxR79g",
+    authDomain: "sage-medicine-firebase-20c8d.firebaseapp.com",
+    projectId: "sage-medicine-firebase-20c8d",
+    storageBucket: "sage-medicine-firebase-20c8d.appspot.com",
+    messagingSenderId: "1047825736546",
+    appId: "1:1047825736546:web:28da56878f113dbec5423b"
+  }
 };
 
 /*

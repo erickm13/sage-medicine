@@ -1,0 +1,58 @@
+.wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-image: url('../../../assets/img/fondo-login-doctor.jpg');
+	background-size: cover;
+    width: 100%;
+    max-width: 1920px;
+	min-height: 1080px;
+    margin: auto;
+    padding: 15px;
+    padding-bottom: 8em;
+    text-align: center;
+}
+
+.form-floating {
+    text-align: start;
+}
+
+.logo{
+    height: 150px;
+    margin-bottom: 10px;
+	border-radius: 100%;
+}
+
+.body {
+    width: 100%;
+    max-width: 440px;
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+    border-radius: 2%;
+    box-shadow: 0 0 15px rgb(116, 114, 114);
+}
+
+.link-notienescuenta{
+    color: rgb(103, 194, 114);
+    text-decoration: none;
+
+}
+
+.link-olvidastetucontrasena{
+    color: rgb(103, 194, 114);
+    text-decoration: none;
+}
+
+.container-footer {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgb(116, 114, 114);
+    background: #fff;
+    width: 100%;
+}

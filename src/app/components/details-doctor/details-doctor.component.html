@@ -1,0 +1,35 @@
+<div class=" wrapper">
+	<div *ngFor="let data of dataDoctor"  class="detailsDoctor">
+
+		<div class="body">
+			<div class="modal-header">
+				<h1 class="modal-dialog" id="exampleModalFullscreenLabel">Datos Personales</h1>
+			</div>
+			<div class="col mt-5">
+				<div class="row-lg-5">
+					<p class=""><b>Dr. </b>{{data.nombre}}</p>
+				</div>
+			</div>
+			<div class="col">
+				<p class=""><b>Telefono: </b> {{data.telefono}}</p>
+			</div>
+
+			<div class="col">
+				<p class=""><b>Correo Electronico: </b> {{data.email}}</p>
+			</div>
+
+			<div class="col">
+				<p class=""><b>Direccion Clinica: </b> {{data.direccion}}</p>
+			</div>
+
+			<div class="col">
+				<p class=""><b>Municipio: </b> {{data.nombre_municipio}}, {{data.nombre_departamento}}</p>
+			</div>
+
+			<div class="col">
+				<p class=""><b>Especialidad: </b> {{data.nombre_especialidad}}</p>
+			</div>
+			<button type="button" class="btn btn-success col mt-5" (click)="regresar()">Regresar</button>
+	</div>
+
+</div>

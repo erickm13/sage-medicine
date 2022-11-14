@@ -1,0 +1,35 @@
+.container-footer{
+    padding: 40px;
+}
+
+.container-nagvar{
+    display: 100%;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+
+.hero{
+	background-image: url(../../../assets/img/fondo-dashboard-user.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	z-index: 2;
+}
+
+.hero::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(21, 20, 51, 0.8);
+	z-index: -1;
+}
+
+h1,h2,h3,h4,h5,h6,
+	.display-4{
+		color: var(--dark);
+		font-weight: 700;
+	}

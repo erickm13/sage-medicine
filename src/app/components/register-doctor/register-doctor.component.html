@@ -1,0 +1,46 @@
+<div class="wrapper" *ngIf="modalSwitch != true">
+    <div *ngIf="!loading" class="body">
+        <img class="logo" src="../../../assets/img/acceso.png" alt="Login">
+        <h1>Registrarse</h1>
+        <form (ngSubmit)="register()" [formGroup]="registerUser">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" formControlName="email" placeholder="name@example.com">
+                <label>Correo</label>
+                <span *ngIf="registerUser.get('email')?.hasError('required') && registerUser.get('email')?.touched" class="text-danger errorLabel">
+                    El <strong>correo</strong> es requerido
+                </span>
+                <span *ngIf="registerUser.get('email')?.hasError('email') && registerUser.get('email')?.touched" class="text-danger errorLabel">
+                    El <strong>correo</strong> es invalido
+                </span>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                <label>Contraseña</label>
+                <span *ngIf="registerUser.get('password')?.hasError('required') && registerUser.get('password')?.touched" class="text-danger errorLabel">
+                    La <strong>Contraseña</strong> es requerida
+                </span>
+                <span *ngIf="registerUser.get('password')?.hasError('minlength') && registerUser.get('password')?.touched" class="text-danger errorLabel">
+                    La <strong>Contraseña</strong> debe tener 6 caracteres
+                </span>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" formControlName="repeatPassword" placeholder="Password">
+                <label>Repetir Contraseña</label>
+                <span *ngIf="registerUser.get('repeatPassword')?.hasError('required') && registerUser.get('repeatPassword')?.touched" class="text-danger errorLabel">
+                    La <strong>Contraseña</strong> es requerida
+                </span>
+                <p class="mt-2">Al hacer clic en Registrarse, acepta los términos de uso.</p>
+            </div>
+            <div class="d-grid gap-2 mb-3">
+                <button class="btn btn-primary btn-lg" [disabled]="registerUser.invalid" type="submit">Registrarse</button>
+            </div>
+            <a routerLink="/login">Volver</a>
+        </form>
+    </div>
+        <app-spinner *ngIf="loading"></app-spinner>
+        <ngx-toast-notifier></ngx-toast-notifier>
+</div>
+
+<div class="Modal" *ngIf="modalSwitch == true" >
+    <app-form-user></app-form-user>
+</div>

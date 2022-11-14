@@ -1,0 +1,56 @@
+<div class="container-nagvar">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/calendar" class="nav-link px-2 link-dark">Calendario</a></li>
+        <li><a href="/citas-doctor" class="nav-link px-2 link-dark">Citas</a></li>
+      </ul>
+
+      <div class="dropdown text-end">
+        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="../../../assets/img/logo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+        </a>
+        <ul class="dropdown-menu text-small" style="">
+			<li><a class="dropdown-item" (click)="statusDoctor('1')" type="button">Estado Activo</a></li>
+			<li><a class="dropdown-item" (click)="statusDoctor('0')" type="button">Estado Inactivo</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a type="button" class="dropdown-item" (click)="logOut()">Cerrar Sesion</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="hero vh-100 d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 mx-auto text-center">
+          <h1 *ngFor="let data of dataDoctor" class="display-4 text-white"> Sage Medicine te da la Bienvenida {{data.nombre}} </h1>
+          <p class="text-white my-3">Revisa con regularidad tus citas para no dejar ninguna al pendiente!</p>
+		  <div *ngFor="let data of dataDoctor" class="habilitado">
+			<p *ngIf="data.habilitado == 1" class="text-white my-3">Estado: Activo</p>
+			<p *ngIf="data.habilitado == 0" class="text-white my-3">Estado: Inactivo</p>
+		  </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+  
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+      </ul>
+      <p class="text-center text-muted">© 2022 Sage Medicine, Inc</p>
+    </footer>
+  </div>

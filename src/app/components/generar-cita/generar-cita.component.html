@@ -1,0 +1,16 @@
+
+	<div class=" wrapper">
+		<div class="body">
+			<div class="modal-header align-items-center">
+				<h1 class="modal-title fs-1">Cuando quieres tu Cita?</h1>
+			</div>
+			<div class="col-md-4 ">
+					<div class="form-floating m-sm-4">
+						<input [(ngModel)]="fecha" type="datetime-local" class="form-control salida" id="floatingInput" placeholder="direccion">
+						<label for="floatingInput">Fecha/hora</label>
+					</div>
+					<button type="submit" class="btn btn-success " (click)="agendar()">Agendar</button>
+			</div>
+
+		</div>
+	</div>

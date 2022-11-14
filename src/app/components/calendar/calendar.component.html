@@ -1,0 +1,51 @@
+<div class="container-nagvar">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 link-secondary">Inicio</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Calendario</a></li>
+        <li><a href="/citas" class="nav-link px-2 link-dark">Citas</a></li>
+      </ul>
+
+
+      <div class="dropdown text-end">
+        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="../../../assets/img/logo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+        </a>
+        <ul class="dropdown-menu text-small" style="">
+          <li><a class="dropdown-item" href="#">Perfil</a></li>
+          <li><a class="dropdown-item" href="#">Ajustes</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a type="button" class="dropdown-item" (click)="logOut()">Cerrar Sesion</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Agenda de Citas</h1>
+      </div>
+    </div>
+  </section>
+  <div class="calendario">
+	  <full-calendar [options]="calendarOptions"></full-calendar>
+  </div>
+
+<div class="container-footer ">
+	<footer class="py-1 my-1 mb-3 d-none d-sm-block d-print-block ">
+	  <ul class="nav justify-content-center border-bottom pb-3 mb-3 ">
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+	  </ul>
+	  <p class="text-center text-muted">© 2022 Sage Medicine, Inc</p>
+	</footer>
+  </div>
